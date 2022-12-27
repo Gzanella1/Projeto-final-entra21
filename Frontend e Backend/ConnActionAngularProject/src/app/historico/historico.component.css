@@ -1,0 +1,39 @@
+.um{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    border: none;
+    display: flex;
+    width: 100%;
+    background-color:white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.titulo{
+    display: block;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 50px;
+
+}
+
+.subtitulo {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.text {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
+}

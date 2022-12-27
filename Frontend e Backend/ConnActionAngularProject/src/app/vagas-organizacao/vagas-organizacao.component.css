@@ -1,0 +1,54 @@
+.btn{
+border: 0;
+padding: 10px 8px;
+background-color: #f6f6f6;
+color: black;
+}
+
+ #teste1{
+    background-color: #f6f6f6;
+}
+/* header{
+background-image: url(https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg);
+height: 300px;
+background-repeat: no-repeat;
+} */
+.container{
+align-items: center;
+}
+
+.fs-4{
+    font-size: 2em;
+    color: #f6f6f6;
+}
+
+.org {
+    width: 22vw;
+}
+
+h2 {
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.txtover {
+    text-overflow: ellipsis;
+}
+
+.imgFit {
+    object-fit: cover;
+    width: 22vw;
+    height: 22vw;
+}
+
+.margemorg {
+    margin-left: 2.5vw;
+    margin-bottom: 2vw;
+}
+.titulo{
+    display: block;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 50px!important;
+}

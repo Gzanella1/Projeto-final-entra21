@@ -1,0 +1,30 @@
+<div class="modal fade" id="modalPatrocinador" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Patrocinador</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div (click)="onClick()" class="d-flex justify-content-center">
+            <div class="profile-outter">
+              <div id="patProfile"></div>
+            </div>
+          </div>
+          <form [formGroup]="patrocinadorForm" style="display: flex; flex-direction:column;">
+            <input type="file" id="inputFotoPat" accept="image/jpg, image/png, image/jpeg" formControlName="fotoPatrocinador"
+              (change)="fotoPatrocinador($event)"/>
+            <input type="text" class="border-gradient border-gradient-purple" name="nome" id="nome" formControlName="nome" placeholder="NOME"> 
+            <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+              <div *ngIf="f.nome.errors">Nome em branco!</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit"  class="botaoGradient criar-size" [disabled]="!patrocinadorForm.valid"
+            (click)="criarPatrocinador()">Criar</button>
+          <button type="button" class="botaoBorderGradient voltar-size" data-bs-dismiss="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,132 @@
+/* blocks */
+
+.rot{
+    background: rgba(255, 255, 255, 0.575);
+    display: flex;
+    border-radius: 15px;
+    transform: rotate(-2deg);
+}
+
+.outter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 80px;
+    border-radius: 15px;
+    background-color: white;
+    transform: rotate(2deg);
+}
+
+.cadastro-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cadastro {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* inputs */
+
+input[type=text]{
+    padding: 10px;
+    outline: none;
+    caret-color: rgb(115, 62, 238);
+    width: 240px;
+}
+
+input[type=password]{
+    padding: 10px;
+    outline: none;
+    caret-color: rgb(115, 62, 238);
+    width: 240px;
+}
+
+.border-gradient {
+    border: 0;
+    border-bottom: 4px solid;
+    border-image-slice: 1;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+}
+
+/*input::content{
+    background: -webkit-linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}*/
+
+/* FOTO */
+
+#mediaFile {
+    position: absolute;
+    top: -1000px;
+}
+
+#profile {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin: 5px 5px;
+    border-color: (337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    /* background-image: url(../../assets/favicon2.ico); */
+    display: table;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 5px 8px rgba(black, 0.35);
+}
+
+.profile-outter {
+    border-radius: 100%;
+    position:relative;
+    cursor: pointer;
+    background: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+    display: table;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 5px 8px rgba(black, 0.35);
+    margin-bottom: 12px;
+}
+
+.hasImage {
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none;   
+}
+
+.back {
+    background: rgb(244,206,255);
+    background: linear-gradient(54deg, rgba(244,206,255,1) 31%, rgba(79,168,255,1) 100%);
+}
+
+/* BUTTONS */
+
+.btn-size{
+    padding: 13px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn-sizeB{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+  
+button.voltar:hover {
+    box-shadow: none;
+    color: white;
+}

@@ -1,0 +1,28 @@
+.offcanvas{
+    background-color: rgb(221, 223, 243);
+    border-radius: 10px;
+    width: 350px;
+    height: 550px;
+}
+
+.offcanvas-title{
+    display: flex;
+font-size: 60px;
+margin-left: 25px;
+margin-top: 30px;
+color: rgb(105, 105, 218);
+}
+
+.offcanvas-body{
+    font-size: 21px;
+}
+
+.dropdown-item{
+    margin-top: 17px;
+    margin-left: 23px;
+    width: 100px;
+}
+
+.dropdown-item:hover{
+    color: rgb(89, 89, 218);
+}

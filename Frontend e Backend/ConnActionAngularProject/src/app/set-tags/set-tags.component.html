@@ -1,0 +1,28 @@
+<div class="modal fade" id="setTags" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Minhas Tags</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Através das Tags de Interesse é possível encontrar ONG's que acreditam nas mesmas causas que você</h5>
+        <p>A seguir estão as Tags, não se preocupe você pode editar elas quando quiser!</p>
+        <form [formGroup]="tagsForm" novalidate>
+          <div class="form-horizontal">
+            <div class="list-group-item" [id]="tag.id" *ngFor="let tag of tags; let i=index">
+                <label>
+                  <input type="checkbox" [value]="tag.id" (change)="onCheckboxChange($event)" />
+                  {{tag.nome}}
+                </label>
+              </div>
+            </div>  
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" data-bs-dismiss="modal" (click)="setUserTags()" class="botaoGradient criar-size" [disabled]="!tagsForm.valid">Selecionar</button>
+        <button type="button" class="botaoBorderGradient voltar-size" data-bs-dismiss="modal">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

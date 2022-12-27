@@ -1,0 +1,60 @@
+<div class="container">
+  <header class="d-flex flex-row header my-2 align-items-center">
+    <div class="profile-outter">
+        <div id="profile" [ngStyle]="{'background-image': 'url(' + org.orgFoto + ')'}"></div>
+    </div>
+    <div class="customVr"></div>
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row align-items-center"><h1 class="mb-0"> {{org.nomeOrg}}</h1></div>
+    </div>
+</header>
+
+  <div class="row g-5">
+    <div class="">
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1">Descrição</h2>
+        <p>{{org.descricao}}</p>
+      </article>
+      <hr>
+      <h2>Eventos</h2>
+      <div class="d-flex flex-row flex-wrap justify-content-between">
+        <div class="mb-3" *ngFor="let evento of org.eventos">
+          <div class="card shadow-sm eventosize">
+            <div class="card-body">
+              <div class="header-evento">
+                <h5 class="card-title txtover flex-wrap">{{evento.nome}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{evento.data}}</h6>
+              </div>
+              <div class="d-flex flex-row flex-wrap">
+                <p class="tag mb-1 me-1" *ngFor="let tag of evento.tagsEvento">{{tag}}</p>
+              </div>
+              <div class="btn-group d-flex justify-content-between">
+                <button class="botaoBorderGradient btn-size-b" (click)="gerenciarEvento(evento)">Gerenciar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row margemorg mb-3">
+          <div class="card shadow-sm eventosize backcolor">
+            <div class="card-body">
+              <h5 class="card-title txtover flex-wrap">Adicionar Evento</h5>
+              <div class="d-flex">
+                <div class="btn-group align-self-end">
+                  <button type="button" class="botaoGradient btn-size " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Adicionar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2>Contribuições</h2>
+      <div class="contribuicoes">
+        <p>Valor total recebido: R${{org.valorTotal}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-criar-evento></app-criar-evento>
